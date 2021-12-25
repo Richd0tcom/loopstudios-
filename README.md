@@ -1,4 +1,4 @@
 # loopstudios-
 loopstudios landing page
 
-./design/desktop-preview.jpg
+./loopstudios-landing-page-main/design/desktop-preview.jpg
