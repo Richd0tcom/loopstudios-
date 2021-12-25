@@ -1,0 +1,782 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+	font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+
+#menu{
+	
+	width: 30px;
+	height: 25px;
+	margin: 30px 5vw 20px 93vw;
+	cursor: pointer;
+	
+}
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: #faf6f8;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+
+.change .bar{
+	background-color: white;
+}
+
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity: 0;
+}
+
+.nav li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 2.5em;
+}
+.nav li a:hover{
+	font-weight: bold;
+}
+.nav li{
+	list-style: none;
+	padding: 16px 0;
+	padding-top: 5%;
+	padding-left:2em;
+	text-align: left;
+	height:10%;
+	transition: 0.8s ease;
+	
+}
+.nav{
+
+	padding: 0;
+	margin: 0 20px;
+	transition: 0.5s ease;
+	display: none;
+	
+}
+.change{
+	display: block;
+}
+
+
+
+.change #nav-bar{
+	width:100vw;
+}
+#foreal{
+	margin-top: -20px;
+	width:100vw;
+	
+}
+#foreal svg {
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+.menu-bg{
+	z-index: 1;
+	width: 0;
+	height: 0;
+	margin: 0px 0 20px 20px;
+	background: radial-gradient(circle,#030303,#080808);
+	border-radius: 0%;
+	transition: 0.1s ease;
+}
+.change-bg{/* change to be pushed.  i used viewport for heigth beacusee we need it to cover the whole screen*/
+	width: 100vw;
+	height: 100vh;
+	transform: translate(0,0);
+	
+}
+.menu-bg, #menu-bar{
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+
+.change-bg #menu-bg{/* change1*/
+	left:0px;
+	margin-left: 0px;
+}
+#menu-bar{
+	z-index: 2;
+	position:fixed;
+}
+
+.scrolling-active #menu-bar{/*change 2*/
+	background: linear-gradient(45deg, #f32170,#2196f3,#ff00eb);
+	z-index: 1;/*changed frm 2 to 1*/
+	
+}
+/*.scrolling-active .change #menu-bar{
+	display:none;
+}*/
+
+.svg{
+	margin-left:10px;
+	position: relative;
+	z-index: 2;
+	
+}
+
+
+.header{
+
+	/*background-image: url(./loopstudios-landing-page-main/images/mobile/image-hero.jpg);*/
+	position: fixed;
+}
+#header{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-hero.jpg);
+	min-height:100vh;
+	max-width:100vw;
+	background-position: center;
+}
+
+#header h1{
+	text-transform: uppercase;
+	font-weight: 350;
+	color:white;
+	padding:0px;
+	font-size: 1.8em;
+	line-height: 1.3em;
+	
+}
+.head-text{
+	margin-left:20px;
+	margin-right:15px;
+	margin-top:30vh;
+	border:2px solid white;
+	padding: 15px 15px;
+	
+}
+.vid-contain{
+	
+	width:100vw;
+	height:100%;
+	padding-bottom: 56%;
+	border-radius:8px;
+}
+/*#visual{
+	position:relative;
+	width:100vw;
+	margin: 0px 10px 40px 0px;
+	border-radius:8px;
+}
+
+video{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;
+	padding:10px;
+	border-radius:10px;
+}*/
+.purple-img{
+	margin-top: 60px;
+	height:auto;
+	width: 100vw;
+	padding:10px;
+	overflow: hidden;
+	
+}
+.purple-img img{
+	
+	width:100%;
+	height:auto;
+	border-radius: 5px;
+}
+
+.leader{
+	margin: 30px 25px 50px 25px;
+	
+}
+.leader p{
+	text-align: justify;
+	line-height: 1.3em;
+}
+.leader h2{
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 300;
+}
+#images{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+}
+figcaption{
+	color:white;
+	text-transform: uppercase;
+	font-size: 1.6em;
+	font-weight: 250;
+	margin-left: 15px;
+}
+.creations h3{
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	font-size: 1.5em;
+
+
+}
+figure{
+	border-radius:5px;
+	box-shadow: hsl(0, 0%, 80%) 3px 3px 3px 3px;
+	
+}
+
+
+#Deep{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-deep-earth.jpg);
+	height:15vh;
+	width:auto;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	margin:10px;
+}
+#night{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-night-arcade.jpg);
+	height:15vh;
+	background-position: center;
+	background-size: cover;
+	width:auto;
+	padding: 10px;
+	margin:10px;
+}
+#soccer{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-soccer-team.jpg);
+	height:15vh;
+	width:auto;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	margin:10px;
+}
+#grid{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-grid.jpg);
+	height:15vh;
+	width:auto;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	margin:10px;
+}
+#above{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-from-above.jpg);
+	height:15vh;
+	width:auto;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	margin:10px;
+}
+#pocket{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-pocket-borealis.jpg);
+	height:15vh;
+	width:auto;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	margin:10px;
+}
+#curiosity{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-curiosity.jpg);
+	height:15vh;
+	width:auto;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	margin:10px;
+}
+#fisheye{
+	background-image: url(./loopstudios-landing-page-main/images/mobile/image-fisheye.jpg);
+	height:15vh;
+	width:auto;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	margin:10px;
+}
+
+.more{
+	align-self: center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	margin:20px;
+	border:1px solid black;
+	width:110px;
+	height:30px;
+}
+.more button{
+	border:none;
+	background:none;
+	width:100%;
+	height:100%;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin:0px;
+}
+button:hover{
+	font-weight: 600;
+}
+button:active{
+	background-color: black;
+	color:azure;
+}
+
+#email {
+    margin:5px 0 10px 0px;
+    outline: none;
+    padding:5px;
+    width:80vw;
+	height:30px;
+    font-size:1em;
+    border-radius:3px;
+	border:1px solid black;
+    background:rgb(245, 247, 247);
+}
+#contact h3{
+
+	padding-left: 0px;
+}
+#contact{
+	margin-top: 40px;
+	display:flex;
+
+	
+}
+#form{
+	display:flex;
+	flex-direction: column;
+	
+	margin-left: 20px;
+}
+.sbmit{
+	justify-self:center;
+	align-self: center;
+	margin:10px;
+	border:1px solid black;
+	width:90px;
+	height:25px;
+}
+.sbmit input{
+	border:none;
+	background:none;
+	width:100%;
+	height:100%;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin:0px;
+}
+
+footer{
+	background: hsl(0, 0%, 0%);
+	color:white;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 0px 0px 0px;
+	padding-top: 20px;
+}
+.icons{
+	display:flex;
+	flex-direction: row;
+	margin: 10px;
+}
+footer div{
+	margin:20px;
+}
+.copy{
+	margin-top: 0px;
+	padding: auto 15px;
+	text-align: center;
+}
+
+@media screen and (min-width:815px) {
+
+	.nav{
+		display:flex;
+		width:50vw;
+		font-size:0.9em;
+		height:80px;
+		padding-right:-25px;
+		justify-content: center;
+		align-items: flex-start;
+		
+
+		
+	}
+	.nav li{
+		margin-top: 0px;
+		margin-right:10px;
+		padding-top: 25px;
+		font-size:0.5em;
+	}
+	.menu-bg, #menu{
+		display:none;
+	}
+	.header{
+		position:fixed;
+		top:0px;
+		
+		width: 100vw;
+		height: 80px;
+		margin-top:0px;
+	}
+	.svg{
+		margin-top: 20px;
+		margin-left:100px;
+		
+	}
+	#foreal svg {
+		margin-top: 40px;
+	}
+	#header{
+		background: url(./loopstudios-landing-page-main/images/desktop/image-hero.jpg);
+		background-attachment: fixed;
+    	background-position: center;
+		background-size: cover;
+	}
+
+	
+	.head-text{
+		margin-left:100px;
+		width:400px;
+		margin-top:40vh;
+		border:2px solid white;
+		padding: 15px 20px;
+		
+	}
+	#header h1{
+		text-transform: uppercase;
+		color:white;
+		padding:0px;
+		font-size: 2.5em;
+		line-height: 1.3em;
+		letter-spacing: 0.1em;
+		font-weight: 300;
+		
+	}
+	.scrolling-active #foreal{
+		background: linear-gradient(45deg, #f32170,#2196f3,#ff00eb);
+		box-shadow: rgba();
+
+	}
+	.scrolling-active #menu-bar{
+		
+		background:none;
+	}
+
+	#about{
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		grid-template-columns: 75% 15%;
+		grid-column-gap: 0px;
+		height:75vh;
+		width:100vw;
+		margin-top:100px;
+		margin-right: 0px;
+	}
+	.purple-img img{
+		display:none;
+	}
+	.purple-img{
+		background:url(./loopstudios-landing-page-main/images/desktop/image-interactive.jpg);
+		margin-left: 60px;
+		margin-bottom:40px;
+		width:730px;
+		height:500px;
+		border-radius: 5px;
+	}
+	.leader{
+		height:300px;
+		width:500px;
+		align-self:center;
+		justify-self: end;
+		background:#fff;
+		margin-left: -150px;
+		
+		margin-bottom: -190px;
+		padding:70px 70px 0px 70px;
+		
+		
+	}
+	.leader h2{
+		font-weight: 300;
+		padding-bottom: 20px;
+	}
+	.leader p{
+		text-align: justify;
+	}
+	
+
+	.vid-contain{
+		position:relative;
+		width:70vw;
+		height:100%;
+		padding-bottom: 42%;
+		border-radius:8px;
+		
+		overflow-x: hidden;
+		background-color: hsl(0, 0%, 3%);
+		box-shadow: hsl(0, 3%, 71%) 3px 3px 3px 3px;
+		z-index: 1;
+		margin-bottom: 10px;
+	}
+	#visual{
+		margin-top:130px;
+		margin-left: 0px;
+		margin-right: 0px;
+		
+		display:flex;
+		justify-content: center;
+		align-items:center;
+
+		border-radius:8px;
+		overflow-y: hidden;
+	}
+	
+	video{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:auto;
+		padding:10px;
+		border-radius:10px;
+		z-index: 1;
+	}
+	#images{
+		margin:100px;
+		display:grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 100px repeat(2, 450px);
+		grid-template-areas: 'creations creations creations more';
+		grid-gap: 30px 10px;
+	}
+
+
+
+	figcaption{
+		color:white;
+		text-transform: uppercase;
+		font-size: 1.6em;
+		font-weight: 250;
+		align-self: end;
+		justify-self: start;
+		margin-bottom: 20px;
+
+	}
+
+	#images a:hover{
+		/*glass effect
+		background-color: #ffffff10;
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);*/
+		
+		transition: 0.3s ease;
+	}
+
+	figure{
+		border-radius:7px;
+		box-shadow: hsl(0, 0%, 80%) 3px 3px 3px 3px;
+	}
+
+	#Deep{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-deep-earth.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+		
+		
+		
+	}
+	#night{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-night-arcade.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+		box-shadow: hsl(0, 0%, 67%), 10px, 10px, 3px, 3px;
+		
+	}
+	#soccer{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-soccer-team.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+		
+	}
+	#grid{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-grid.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+		
+	}
+	#above{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-from-above.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+		
+	}
+	#pocket{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-pocket-borealis.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+
+		
+	}
+	#curiosity{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-curiosity.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+		
+	}
+	#fisheye{
+		background-image: url(./loopstudios-landing-page-main/images/desktop/image-fisheye.jpg);
+		background-position: center;
+		background-size: cover;
+		height:450px;
+		display:grid;
+		
+	}
+	
+	.more{
+		grid-area:more;
+		justify-self:end;
+
+	}
+
+	.creations {
+		text-transform: uppercase;
+		text-align: center;
+		grid-area: creations;
+		justify-self: start;
+		align-self: center;
+		
+	}
+	.creations h3{
+		font-size: 2em;
+		margin-left: 5px;
+		font-weight: 300;
+	}
+	#contact{
+		margin:50px 100px 50px 100px;
+	}
+
+
+	#email {
+		outline: none;
+		padding:5px;
+		width:40vw;
+		/*height:30px;
+		font-size:1em;
+		border-radius:3px;
+		border:1px solid black;
+		background:rgb(245, 247, 247);*/
+	}
+	#contact h3{
+		font-size: 1.5em;
+		padding-left: 0px;
+		font-weight: 500;
+	}
+	
+	footer{
+		background: hsl(0, 0%, 0%);
+		color:white;
+		display:grid;
+		grid-template-columns: repeat(5, 10%) 50%;
+		grid-template-rows: 85px 85px;
+		padding:25px 100px 25px 100px;
+		justify-items: center;
+		align-items:center;
+
+		
+	}
+	
+	.logo{
+		grid-column: 1/5;
+		grid-row: 1/2;
+		justify-self: start;
+	}
+	.icons{
+		grid-column: 6/7;
+		grid-row: 1/3;
+		align-self: start;
+		justify-self: end;
+	}
+	.about{
+		grid-column: 1/2;
+		grid-row: 2/3;
+		justify-self: start;
+		
+	}
+	.copy{
+		grid-column: 6/7;
+		grid-row: 2/3;
+		justify-self:end;
+		
+	}
+	.event{
+		grid-column: 3/4;
+		grid-row: 2/3;
+		justify-self: start;
+	}
+	.product{
+		grid-column: 4/5;
+		grid-row: 2/3;
+		justify-self: start;
+	}
+	.support{
+		grid-column: 2/3;
+		grid-row: 2/3;
+		justify-self: start;
+	}
+	.connect{
+		grid-column: 5/6;
+		grid-row:2/3;
+	}
+
+
+
+}
